@@ -1,0 +1,69 @@
+/home/alex/miniconda3/envs/magenta/bin/python /home/alex/Project/hands-on-music-generation-with-magenta/Chapter03/01.py
+WARNING: Logging before flag parsing goes to stderr.
+W0814 22:53:37.189616 140250017871680 deprecation_wrapper.py:119] From /home/alex/miniconda3/envs/magenta/lib/python3.5/site-packages/magenta/pipelines/statistics.py:132: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+W0814 22:53:38.934503 140250017871680 deprecation_wrapper.py:119] From /home/alex/miniconda3/envs/magenta/lib/python3.5/site-packages/magenta/music/note_sequence_io.py:60: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+W0814 22:53:39.625308 140250017871680 lazy_loader.py:50] 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+W0814 22:53:39.630028 140250017871680 deprecation_wrapper.py:119] From /home/alex/Project/hands-on-music-generation-with-magenta/Chapter03/01.py:48: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+W0814 22:53:39.630681 140250017871680 deprecation_wrapper.py:119] From /home/alex/miniconda3/envs/magenta/lib/python3.5/site-packages/magenta/music/notebook_utils.py:196: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+W0814 22:53:39.630917 140250017871680 deprecation_wrapper.py:119] From /home/alex/miniconda3/envs/magenta/lib/python3.5/site-packages/magenta/music/sequence_generator_bundle.py:30: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0814 22:53:39.707593 140250017871680 deprecation_wrapper.py:119] From /home/alex/miniconda3/envs/magenta/lib/python3.5/site-packages/magenta/music/model.py:70: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2019-08-14 22:53:39.708070: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-14 22:53:39.733679: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2904000000 Hz
+2019-08-14 22:53:39.734141: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5581f9d9a6b0 executing computations on platform Host. Devices:
+2019-08-14 22:53:39.734175: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+W0814 22:53:39.734664 140250017871680 deprecation_wrapper.py:119] From /home/alex/miniconda3/envs/magenta/lib/python3.5/site-packages/magenta/music/model.py:71: The name tf.train.import_meta_graph is deprecated. Please use tf.compat.v1.train.import_meta_graph instead.
+
+2019-08-14 22:53:39.751123: W tensorflow/core/framework/op_def_util.cc:357] Op TensorArray is deprecated. It will cease to work in GraphDef version 16. Use TensorArrayV3.
+2019-08-14 22:53:39.751437: W tensorflow/core/framework/op_def_util.cc:357] Op TensorArrayScatter is deprecated. It will cease to work in GraphDef version 19. Use TensorArrayGradV3.
+2019-08-14 22:53:39.751792: W tensorflow/core/framework/op_def_util.cc:357] Op TensorArrayRead is deprecated. It will cease to work in GraphDef version 16. Use TensorArrayReadV3.
+2019-08-14 22:53:39.753160: W tensorflow/core/framework/op_def_util.cc:357] Op TensorArrayWrite is deprecated. It will cease to work in GraphDef version 16. Use TensorArrayWriteV3.
+2019-08-14 22:53:39.753304: W tensorflow/core/framework/op_def_util.cc:357] Op TensorArraySize is deprecated. It will cease to work in GraphDef version 16. Use TensorArraySizeV3.
+2019-08-14 22:53:39.753406: W tensorflow/core/framework/op_def_util.cc:357] Op TensorArrayGather is deprecated. It will cease to work in GraphDef version 16. Use TensorArrayGatherV3.
+W0814 22:53:39.785064 140250017871680 meta_graph.py:935] The saved meta_graph is possibly from an older release:
+'model_variables' collection should be of type 'byte_list', but instead is of type 'node_list'.
+W0814 22:53:39.786346 140250017871680 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+I0814 22:53:39.787474 140250017871680 saver.py:1280] Restoring parameters from /tmp/tmp_wcnh_vl/model.ckpt
+2019-08-14 22:53:39.809601: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Primer time: [0, 1.6463307499999995]
+Generation time: [1.6463307499999995, 9.878044499999996]
+W0814 22:53:39.841890 140250017871680 deprecation_wrapper.py:119] From /home/alex/miniconda3/envs/magenta/lib/python3.5/site-packages/magenta/music/sequence_generator.py:159: The name tf.gfile.DeleteRecursively is deprecated. Please use tf.io.gfile.rmtree instead.
+
+I0814 22:53:40.067526 140250017871680 events_rnn_model.py:380] Beam search yields sequence with log-likelihood: -66.331970 
+Generated midi file: /home/alex/Project/hands-on-music-generation-with-magenta/Chapter03/output/melody_rnn_basic_rnn_2019-08-14_225340.mid
+W0814 22:53:40.072094 140250017871680 deprecation_wrapper.py:119] From /home/alex/miniconda3/envs/magenta/lib/python3.5/site-packages/magenta/music/midi_io.py:220: The name tf.gfile.Copy is deprecated. Please use tf.io.gfile.copy instead.
+
+Generated plot file: /home/alex/Project/hands-on-music-generation-with-magenta/Chapter03/output/melody_rnn_basic_rnn_2019-08-14_225340.html
+W0814 22:53:40.314570 140250017871680 meta_graph.py:935] The saved meta_graph is possibly from an older release:
+'model_variables' collection should be of type 'byte_list', but instead is of type 'node_list'.
+I0814 22:53:40.316814 140250017871680 saver.py:1280] Restoring parameters from /tmp/tmplid9dgwn/model.ckpt
+Primer time: [0, 1.6463307499999995]
+Generation time: [1.6463307499999995, 9.878044499999996]
+I0814 22:53:40.583974 140250017871680 events_rnn_model.py:380] Beam search yields sequence with log-likelihood: -89.274139 
+Generated midi file: /home/alex/Project/hands-on-music-generation-with-magenta/Chapter03/output/melody_rnn_lookback_rnn_2019-08-14_225340.mid
+Generated plot file: /home/alex/Project/hands-on-music-generation-with-magenta/Chapter03/output/melody_rnn_lookback_rnn_2019-08-14_225340.html
+W0814 22:53:40.988457 140250017871680 meta_graph.py:935] The saved meta_graph is possibly from an older release:
+'model_variables' collection should be of type 'byte_list', but instead is of type 'node_list'.
+I0814 22:53:40.991979 140250017871680 saver.py:1280] Restoring parameters from /tmp/tmpv2_sx_j4/model.ckpt
+Primer time: [0, 1.6463307499999995]
+Generation time: [1.6463307499999995, 9.878044499999996]
+I0814 22:53:41.394919 140250017871680 events_rnn_model.py:380] Beam search yields sequence with log-likelihood: -41.003918 
+Generated midi file: /home/alex/Project/hands-on-music-generation-with-magenta/Chapter03/output/melody_rnn_attention_rnn_2019-08-14_225341.mid
+Generated plot file: /home/alex/Project/hands-on-music-generation-with-magenta/Chapter03/output/melody_rnn_attention_rnn_2019-08-14_225341.html
+
+Process finished with exit code 0
+
