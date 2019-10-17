@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="sounds_cropped_01_data" version="1.3.0" audacityversion="2.2.2" sel0="0.0000000000" sel1="1.0148526077" vpos="0" h="0.0000000000" zoom="1295.7604980469" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="412017__skymary__cat-meow-short" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="44100">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1fd6c.au" len="44100" min="-0.242347" max="0.331601" rms="0.050801"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="209943__veiler__bass-16b" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="44100">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1fdc0.au" len="44100" min="-0.800316" max="0.926199" rms="0.240304"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="160045__jorickhoofd__metal-hit-with-metal-bar-resonance" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="-1.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="44100">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f9f2.au" len="44100" min="-0.927704" max="0.932007" rms="0.074505"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="427567__maria-mannone__flute" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="-0.13040816" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="49851">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1ff12.au" len="49851" min="-0.79428" max="0.794328" rms="0.329544"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
