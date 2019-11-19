@@ -1,0 +1,360 @@
+CUDA_VISIBLE_DEVICES=""  drums_rnn_train --config="drum_kit" --run_dir="logdir/run2" --sequence_example_file="sequence_examples/eval_drum_tracks.tfrecord" --hparams="learning_rate=0.0001,batch_size=128,rnn_layer_sizes=[256,256,256]" --num_training_steps=20000 --eval
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/music/note_sequence_io.py:60: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/pipelines/statistics.py:132: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_train.py:138: The name tf.train.LoggingTensorHook is deprecated. Please use tf.estimator.LoggingTensorHook instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/drums_rnn/drums_rnn_train.py:108: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/drums_rnn/drums_rnn_train.py:65: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+W1117 23:52:46.518507 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/drums_rnn/drums_rnn_train.py:65: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/drums_rnn/drums_rnn_train.py:74: The name tf.gfile.Glob is deprecated. Please use tf.io.gfile.glob instead.
+
+W1117 23:52:46.518728 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/drums_rnn/drums_rnn_train.py:74: The name tf.gfile.Glob is deprecated. Please use tf.io.gfile.glob instead.
+
+INFO:tensorflow:hparams = {'batch_size': 128, 'rnn_layer_sizes': [256, 256, 256], 'dropout_keep_prob': 0.5, 'attn_length': 32, 'clip_norm': 3, 'learning_rate': 0.0001, 'residual_connections': False, 'use_cudnn': False}
+I1117 23:52:46.520166 140184524474176 events_rnn_graph.py:222] hparams = {'batch_size': 128, 'rnn_layer_sizes': [256, 256, 256], 'dropout_keep_prob': 0.5, 'attn_length': 32, 'clip_norm': 3, 'learning_rate': 0.0001, 'residual_connections': False, 'use_cudnn': False}
+INFO:tensorflow:Train dir: logdir/run2/train
+I1117 23:52:46.520438 140184524474176 drums_rnn_train.py:87] Train dir: logdir/run2/train
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/drums_rnn/drums_rnn_train.py:92: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+W1117 23:52:46.521292 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/drums_rnn/drums_rnn_train.py:92: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+INFO:tensorflow:Eval dir: logdir/run2/eval
+I1117 23:52:46.521522 140184524474176 drums_rnn_train.py:93] Eval dir: logdir/run2/eval
+INFO:tensorflow:Counting records in sequence_examples/eval_drum_tracks.tfrecord.
+I1117 23:52:46.521638 140184524474176 sequence_example_lib.py:121] Counting records in sequence_examples/eval_drum_tracks.tfrecord.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:122: tf_record_iterator (from tensorflow.python.lib.io.tf_record) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use eager execution and: 
+`tf.data.TFRecordDataset(path)`
+W1117 23:52:46.521786 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:122: tf_record_iterator (from tensorflow.python.lib.io.tf_record) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use eager execution and: 
+`tf.data.TFRecordDataset(path)`
+INFO:tensorflow:Total records: 234
+I1117 23:52:47.673938 140184524474176 sequence_example_lib.py:127] Total records: 234
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:66: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+W1117 23:52:47.675446 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:66: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/input.py:277: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+W1117 23:52:47.682590 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/input.py:277: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/input.py:189: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+W1117 23:52:47.683634 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/input.py:189: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/input.py:198: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W1117 23:52:47.685609 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/input.py:198: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/input.py:198: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W1117 23:52:47.686929 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/input.py:198: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:67: TFRecordReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TFRecordDataset`.
+W1117 23:52:47.693269 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:67: TFRecordReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TFRecordDataset`.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:71: The name tf.FixedLenSequenceFeature is deprecated. Please use tf.io.FixedLenSequenceFeature instead.
+
+W1117 23:52:47.694672 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:71: The name tf.FixedLenSequenceFeature is deprecated. Please use tf.io.FixedLenSequenceFeature instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:76: The name tf.parse_single_sequence_example is deprecated. Please use tf.io.parse_single_sequence_example instead.
+
+W1117 23:52:47.694903 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:76: The name tf.parse_single_sequence_example is deprecated. Please use tf.io.parse_single_sequence_example instead.
+
+INFO:tensorflow:[<tf.Tensor 'ParseSingleSequenceExample/ParseSingleSequenceExample:0' shape=(?, 518) dtype=float32>, <tf.Tensor 'ParseSingleSequenceExample/ParseSingleSequenceExample:1' shape=(?,) dtype=int64>, <tf.Tensor 'strided_slice:0' shape=() dtype=int32>]
+I1117 23:52:47.702364 140184524474176 sequence_example_lib.py:99] [<tf.Tensor 'ParseSingleSequenceExample/ParseSingleSequenceExample:0' shape=(?, 518) dtype=float32>, <tf.Tensor 'ParseSingleSequenceExample/ParseSingleSequenceExample:1' shape=(?,) dtype=int64>, <tf.Tensor 'strided_slice:0' shape=() dtype=int32>]
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:106: batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.batch(batch_size)` (or `padded_batch(...)` if `dynamic_pad=True`).
+W1117 23:52:47.702995 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/common/sequence_example_lib.py:106: batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.batch(batch_size)` (or `padded_batch(...)` if `dynamic_pad=True`).
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:52: BasicLSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+W1117 23:52:47.713434 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:52: BasicLSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:65: MultiRNNCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.StackedRNNCells, and will be replaced by that in Tensorflow 2.0.
+W1117 23:52:47.724718 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:65: MultiRNNCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.StackedRNNCells, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:272: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+W1117 23:52:47.766445 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:272: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/contrib/rnn/python/ops/core_rnn_cell.py:104: calling Constant.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+W1117 23:52:47.851172 140184524474176 deprecation.py:506] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/contrib/rnn/python/ops/core_rnn_cell.py:104: calling Constant.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:735: Layer.add_variable (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.add_weight` method instead.
+W1117 23:52:47.859841 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:735: Layer.add_variable (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.add_weight` method instead.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:739: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+W1117 23:52:47.868036 140184524474176 deprecation.py:506] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:739: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/ops/rnn.py:244: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W1117 23:52:48.034676 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/ops/rnn.py:244: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/contrib/layers/python/layers/layers.py:1866: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+W1117 23:52:48.088346 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/contrib/layers/python/layers/layers.py:1866: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:306: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W1117 23:52:48.126088 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:306: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:319: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+W1117 23:52:48.130037 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:319: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:353: The name tf.metrics.mean is deprecated. Please use tf.compat.v1.metrics.mean instead.
+
+W1117 23:52:48.131045 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:353: The name tf.metrics.mean is deprecated. Please use tf.compat.v1.metrics.mean instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:354: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
+
+W1117 23:52:48.144531 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:354: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:357: The name tf.metrics.mean_per_class_accuracy is deprecated. Please use tf.compat.v1.metrics.mean_per_class_accuracy instead.
+
+W1117 23:52:48.159114 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:357: The name tf.metrics.mean_per_class_accuracy is deprecated. Please use tf.compat.v1.metrics.mean_per_class_accuracy instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:359: The name tf.metrics.recall is deprecated. Please use tf.compat.v1.metrics.recall instead.
+
+W1117 23:52:48.176529 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:359: The name tf.metrics.recall is deprecated. Please use tf.compat.v1.metrics.recall instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/ops/metrics_impl.py:2200: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+W1117 23:52:48.199264 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/ops/metrics_impl.py:2200: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:368: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+W1117 23:52:48.315486 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:368: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:377: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+W1117 23:52:48.316781 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_graph.py:377: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_train.py:112: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+W1117 23:52:48.324821 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_train.py:112: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_train.py:113: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+W1117 23:52:48.328538 140184524474176 module_wrapper.py:139] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/magenta/models/shared/events_rnn_train.py:113: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+INFO:tensorflow:Waiting for new checkpoint at logdir/run2/train
+I1117 23:52:48.333483 140184524474176 evaluation.py:189] Waiting for new checkpoint at logdir/run2/train
+INFO:tensorflow:Found new checkpoint at logdir/run2/train/model.ckpt-0
+I1117 23:52:48.334933 140184524474176 evaluation.py:198] Found new checkpoint at logdir/run2/train/model.ckpt-0
+INFO:tensorflow:Graph was finalized.
+I1117 23:52:48.439531 140184524474176 monitored_session.py:240] Graph was finalized.
+2019-11-17 23:52:48.440858: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2019-11-17 23:52:48.444897: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2019-11-17 23:52:48.444931: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: xps
+2019-11-17 23:52:48.444942: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: xps
+2019-11-17 23:52:48.445028: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 418.87.1
+2019-11-17 23:52:48.445059: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 418.87.1
+2019-11-17 23:52:48.445070: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 418.87.1
+2019-11-17 23:52:48.470496: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2893290000 Hz
+2019-11-17 23:52:48.470847: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55e0826157c0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2019-11-17 23:52:48.470875: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+INFO:tensorflow:Restoring parameters from logdir/run2/train/model.ckpt-0
+I1117 23:52:48.476527 140184524474176 saver.py:1284] Restoring parameters from logdir/run2/train/model.ckpt-0
+INFO:tensorflow:Running local_init_op.
+I1117 23:52:48.586010 140184524474176 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1117 23:52:48.620615 140184524474176 session_manager.py:502] Done running local_init_op.
+WARNING:tensorflow:From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/monitored_session.py:882: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W1117 23:52:48.674689 140184524474176 deprecation.py:323] From /home/alex/miniconda3/envs/magenta/lib/python3.6/site-packages/tensorflow_core/python/training/monitored_session.py:882: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+INFO:tensorflow:Starting evaluation at 2019-11-17-22:52:48
+I1117 23:52:48.834844 140184524474176 evaluation.py:450] Starting evaluation at 2019-11-17-22:52:48
+2019-11-17 23:52:49.204855: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 135525376 exceeds 10% of system memory.
+2019-11-17 23:52:49.280939: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 135525376 exceeds 10% of system memory.
+2019-11-17 23:53:02.393573: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 66977792 exceeds 10% of system memory.
+2019-11-17 23:53:02.412109: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 66977792 exceeds 10% of system memory.
+2019-11-17 23:53:02.443002: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 64300032 exceeds 10% of system memory.
+INFO:tensorflow:Accuracy = 0.0, Global Step = 0, Loss = 0.0, Perplexity = 1.0
+I1117 23:53:02.884460 140184524474176 basic_session_run_hooks.py:262] Accuracy = 0.0, Global Step = 0, Loss = 0.0, Perplexity = 1.0
+INFO:tensorflow:Evaluation [1/1]
+I1117 23:53:02.884808 140184524474176 evaluation.py:167] Evaluation [1/1]
+INFO:tensorflow:Finished evaluation at 2019-11-17-22:53:02
+I1117 23:53:02.885022 140184524474176 evaluation.py:456] Finished evaluation at 2019-11-17-22:53:02
+INFO:tensorflow:Waiting for new checkpoint at logdir/run2/train
+I1117 23:53:48.378418 140184524474176 evaluation.py:189] Waiting for new checkpoint at logdir/run2/train
+INFO:tensorflow:Found new checkpoint at logdir/run2/train/model.ckpt-15
+I1117 23:53:48.380887 140184524474176 evaluation.py:198] Found new checkpoint at logdir/run2/train/model.ckpt-15
+INFO:tensorflow:Graph was finalized.
+I1117 23:53:48.382280 140184524474176 monitored_session.py:240] Graph was finalized.
+INFO:tensorflow:Restoring parameters from logdir/run2/train/model.ckpt-15
+I1117 23:53:48.383482 140184524474176 saver.py:1284] Restoring parameters from logdir/run2/train/model.ckpt-15
+INFO:tensorflow:Running local_init_op.
+I1117 23:53:48.489376 140184524474176 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1117 23:53:48.528911 140184524474176 session_manager.py:502] Done running local_init_op.
+INFO:tensorflow:Starting evaluation at 2019-11-17-22:53:48
+I1117 23:53:48.588439 140184524474176 evaluation.py:450] Starting evaluation at 2019-11-17-22:53:48
+INFO:tensorflow:Accuracy = 0.0, Global Step = 15, Loss = 0.0, Perplexity = 1.0
+I1117 23:54:05.842400 140184524474176 basic_session_run_hooks.py:262] Accuracy = 0.0, Global Step = 15, Loss = 0.0, Perplexity = 1.0
+INFO:tensorflow:Evaluation [1/1]
+I1117 23:54:05.842654 140184524474176 evaluation.py:167] Evaluation [1/1]
+INFO:tensorflow:Finished evaluation at 2019-11-17-22:54:05
+I1117 23:54:05.842798 140184524474176 evaluation.py:456] Finished evaluation at 2019-11-17-22:54:05
+INFO:tensorflow:Waiting for new checkpoint at logdir/run2/train
+I1117 23:54:48.423220 140184524474176 evaluation.py:189] Waiting for new checkpoint at logdir/run2/train
+INFO:tensorflow:Found new checkpoint at logdir/run2/train/model.ckpt-32
+I1117 23:54:48.426176 140184524474176 evaluation.py:198] Found new checkpoint at logdir/run2/train/model.ckpt-32
+INFO:tensorflow:Graph was finalized.
+I1117 23:54:48.427762 140184524474176 monitored_session.py:240] Graph was finalized.
+INFO:tensorflow:Restoring parameters from logdir/run2/train/model.ckpt-32
+I1117 23:54:48.429662 140184524474176 saver.py:1284] Restoring parameters from logdir/run2/train/model.ckpt-32
+INFO:tensorflow:Running local_init_op.
+I1117 23:54:48.534154 140184524474176 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1117 23:54:48.569563 140184524474176 session_manager.py:502] Done running local_init_op.
+INFO:tensorflow:Starting evaluation at 2019-11-17-22:54:48
+I1117 23:54:48.625965 140184524474176 evaluation.py:450] Starting evaluation at 2019-11-17-22:54:48
+INFO:tensorflow:Accuracy = 0.0, Global Step = 32, Loss = 0.0, Perplexity = 1.0
+I1117 23:55:02.831976 140184524474176 basic_session_run_hooks.py:262] Accuracy = 0.0, Global Step = 32, Loss = 0.0, Perplexity = 1.0
+INFO:tensorflow:Evaluation [1/1]
+I1117 23:55:02.832270 140184524474176 evaluation.py:167] Evaluation [1/1]
+INFO:tensorflow:Finished evaluation at 2019-11-17-22:55:02
+I1117 23:55:02.832415 140184524474176 evaluation.py:456] Finished evaluation at 2019-11-17-22:55:02
+INFO:tensorflow:Waiting for new checkpoint at logdir/run2/train
+I1117 23:55:48.470376 140184524474176 evaluation.py:189] Waiting for new checkpoint at logdir/run2/train
+INFO:tensorflow:Found new checkpoint at logdir/run2/train/model.ckpt-50
+I1117 23:55:48.472177 140184524474176 evaluation.py:198] Found new checkpoint at logdir/run2/train/model.ckpt-50
+INFO:tensorflow:Graph was finalized.
+I1117 23:55:48.473866 140184524474176 monitored_session.py:240] Graph was finalized.
+INFO:tensorflow:Restoring parameters from logdir/run2/train/model.ckpt-50
+I1117 23:55:48.475806 140184524474176 saver.py:1284] Restoring parameters from logdir/run2/train/model.ckpt-50
+INFO:tensorflow:Running local_init_op.
+I1117 23:55:48.584769 140184524474176 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1117 23:55:48.621354 140184524474176 session_manager.py:502] Done running local_init_op.
+INFO:tensorflow:Starting evaluation at 2019-11-17-22:55:48
+I1117 23:55:48.679944 140184524474176 evaluation.py:450] Starting evaluation at 2019-11-17-22:55:48
+INFO:tensorflow:Accuracy = 0.0, Global Step = 50, Loss = 0.0, Perplexity = 1.0
+I1117 23:56:02.633271 140184524474176 basic_session_run_hooks.py:262] Accuracy = 0.0, Global Step = 50, Loss = 0.0, Perplexity = 1.0
+INFO:tensorflow:Evaluation [1/1]
+I1117 23:56:02.633533 140184524474176 evaluation.py:167] Evaluation [1/1]
+INFO:tensorflow:Finished evaluation at 2019-11-17-22:56:02
+I1117 23:56:02.633682 140184524474176 evaluation.py:456] Finished evaluation at 2019-11-17-22:56:02
+INFO:tensorflow:Waiting for new checkpoint at logdir/run2/train
+I1117 23:56:48.514376 140184524474176 evaluation.py:189] Waiting for new checkpoint at logdir/run2/train
+INFO:tensorflow:Found new checkpoint at logdir/run2/train/model.ckpt-68
+I1117 23:56:48.516239 140184524474176 evaluation.py:198] Found new checkpoint at logdir/run2/train/model.ckpt-68
+INFO:tensorflow:Graph was finalized.
+I1117 23:56:48.517625 140184524474176 monitored_session.py:240] Graph was finalized.
+INFO:tensorflow:Restoring parameters from logdir/run2/train/model.ckpt-68
+I1117 23:56:48.518805 140184524474176 saver.py:1284] Restoring parameters from logdir/run2/train/model.ckpt-68
+
+
+.....
+
+INFO:tensorflow:Evaluation [1/1]
+I1118 19:06:37.571770 140184524474176 evaluation.py:167] Evaluation [1/1]
+INFO:tensorflow:Finished evaluation at 2019-11-18-18:06:37
+I1118 19:06:37.571919 140184524474176 evaluation.py:456] Finished evaluation at 2019-11-18-18:06:37
+INFO:tensorflow:Waiting for new checkpoint at logdir/run2/train
+I1118 19:07:23.542683 140184524474176 evaluation.py:189] Waiting for new checkpoint at logdir/run2/train
+INFO:tensorflow:Found new checkpoint at logdir/run2/train/model.ckpt-20000
+I1118 19:07:23.548038 140184524474176 evaluation.py:198] Found new checkpoint at logdir/run2/train/model.ckpt-20000
+INFO:tensorflow:Graph was finalized.
+I1118 19:07:23.550265 140184524474176 monitored_session.py:240] Graph was finalized.
+INFO:tensorflow:Restoring parameters from logdir/run2/train/model.ckpt-20000
+I1118 19:07:23.552662 140184524474176 saver.py:1284] Restoring parameters from logdir/run2/train/model.ckpt-20000
+INFO:tensorflow:Running local_init_op.
+I1118 19:07:23.736337 140184524474176 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1118 19:07:23.795984 140184524474176 session_manager.py:502] Done running local_init_op.
+INFO:tensorflow:Starting evaluation at 2019-11-18-18:07:23
+I1118 19:07:23.873781 140184524474176 evaluation.py:450] Starting evaluation at 2019-11-18-18:07:23
+INFO:tensorflow:Accuracy = 0.0, Global Step = 20000, Loss = 0.0, Perplexity = 1.0
+I1118 19:07:34.185280 140184524474176 basic_session_run_hooks.py:262] Accuracy = 0.0, Global Step = 20000, Loss = 0.0, Perplexity = 1.0
+INFO:tensorflow:Evaluation [1/1]
+I1118 19:07:34.185541 140184524474176 evaluation.py:167] Evaluation [1/1]
+INFO:tensorflow:Finished evaluation at 2019-11-18-18:07:34
+I1118 19:07:34.185688 140184524474176 evaluation.py:456] Finished evaluation at 2019-11-18-18:07:34
+INFO:tensorflow:Waiting for new checkpoint at logdir/run2/train
+I1118 19:08:23.597547 140184524474176 evaluation.py:189] Waiting for new checkpoint at logdir/run2/train
+INFO:tensorflow:Timed-out waiting for a checkpoint.
+I1118 19:13:22.812043 140184524474176 evaluation.py:251] Timed-out waiting for a checkpoint.
+
