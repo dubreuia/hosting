@@ -1,0 +1,65 @@
+Completed.
+
+INFO:tensorflow:Processed 2680 inputs total. Produced 2150 outputs.
+I1120 18:02:14.314350 140099624879936 pipeline.py:388] Processed 2680 inputs total. Produced 2150 outputs.
+INFO:tensorflow:DAGPipeline_MelodyExtractor_eval_melodies_discarded_too_few_pitches: 297
+I1120 18:02:14.314481 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_eval_melodies_discarded_too_few_pitches: 297
+INFO:tensorflow:DAGPipeline_MelodyExtractor_eval_melodies_discarded_too_long: 0
+I1120 18:02:14.314578 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_eval_melodies_discarded_too_long: 0
+INFO:tensorflow:DAGPipeline_MelodyExtractor_eval_melodies_discarded_too_short: 732
+I1120 18:02:14.314694 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_eval_melodies_discarded_too_short: 732
+INFO:tensorflow:DAGPipeline_MelodyExtractor_eval_melodies_truncated: 54
+I1120 18:02:14.314801 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_eval_melodies_truncated: 54
+INFO:tensorflow:DAGPipeline_MelodyExtractor_eval_melody_lengths_in_bars:
+  [7,8): 27
+  [8,10): 33
+  [10,20): 48
+  [20,30): 36
+  [30,40): 48
+I1120 18:02:14.314912 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_eval_melody_lengths_in_bars:
+  [7,8): 27
+  [8,10): 33
+  [10,20): 48
+  [20,30): 36
+  [30,40): 48
+INFO:tensorflow:DAGPipeline_MelodyExtractor_eval_polyphonic_tracks_discarded: 2174
+I1120 18:02:14.315030 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_eval_polyphonic_tracks_discarded: 2174
+INFO:tensorflow:DAGPipeline_MelodyExtractor_training_melodies_discarded_too_few_pitches: 2466
+I1120 18:02:14.315107 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_training_melodies_discarded_too_few_pitches: 2466
+INFO:tensorflow:DAGPipeline_MelodyExtractor_training_melodies_discarded_too_long: 0
+I1120 18:02:14.315184 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_training_melodies_discarded_too_long: 0
+INFO:tensorflow:DAGPipeline_MelodyExtractor_training_melodies_discarded_too_short: 7155
+I1120 18:02:14.315260 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_training_melodies_discarded_too_short: 7155
+INFO:tensorflow:DAGPipeline_MelodyExtractor_training_melodies_truncated: 306
+I1120 18:02:14.315335 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_training_melodies_truncated: 306
+INFO:tensorflow:DAGPipeline_MelodyExtractor_training_melody_lengths_in_bars:
+  [7,8): 474
+  [8,10): 345
+  [10,20): 656
+  [20,30): 189
+  [30,40): 282
+  [40,50): 6
+  [50,100): 6
+I1120 18:02:14.315423 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_training_melody_lengths_in_bars:
+  [7,8): 474
+  [8,10): 345
+  [10,20): 656
+  [20,30): 189
+  [30,40): 282
+  [40,50): 6
+  [50,100): 6
+INFO:tensorflow:DAGPipeline_MelodyExtractor_training_polyphonic_tracks_discarded: 16169
+I1120 18:02:14.315514 140099624879936 statistics.py:141] DAGPipeline_MelodyExtractor_training_polyphonic_tracks_discarded: 16169
+INFO:tensorflow:DAGPipeline_RandomPartition_eval_melodies_count: 271
+I1120 18:02:14.315590 140099624879936 statistics.py:141] DAGPipeline_RandomPartition_eval_melodies_count: 271
+INFO:tensorflow:DAGPipeline_RandomPartition_training_melodies_count: 2409
+I1120 18:02:14.315666 140099624879936 statistics.py:141] DAGPipeline_RandomPartition_training_melodies_count: 2409
+INFO:tensorflow:DAGPipeline_TranspositionPipeline_eval_skipped_due_to_range_exceeded: 1
+I1120 18:02:14.315742 140099624879936 statistics.py:141] DAGPipeline_TranspositionPipeline_eval_skipped_due_to_range_exceeded: 1
+INFO:tensorflow:DAGPipeline_TranspositionPipeline_eval_transpositions_generated: 4580
+I1120 18:02:14.315817 140099624879936 statistics.py:141] DAGPipeline_TranspositionPipeline_eval_transpositions_generated: 4580
+INFO:tensorflow:DAGPipeline_TranspositionPipeline_training_skipped_due_to_range_exceeded: 15
+I1120 18:02:14.315892 140099624879936 statistics.py:141] DAGPipeline_TranspositionPipeline_training_skipped_due_to_range_exceeded: 15
+INFO:tensorflow:DAGPipeline_TranspositionPipeline_training_transpositions_generated: 43134
+I1120 18:02:14.315968 140099624879936 statistics.py:141] DAGPipeline_TranspositionPipeline_training_transpositions_generated: 43134
+
